@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="ffmpeg.js"></script> <!-- Make sure this file exists and is the UMD build -->
+    <!-- Remove webp-converter.min.js if not present -->
+</head>
+<body>
+    <h1>File Converter</h1>
+    <input type="file" id="fileInput" accept="video/*,image/*">
+    <select id="conversionType">
+        <option value="mkvToMp4">MKV to MP4</option>
+        <option value="webpToPng">WebP to PNG</option>
+        <option value="videoToMp3">Video to MP3</option>
+    </select>
+    <button id="convertBtn">Convert</button>
+    <progress id="progressBar" value="0" max="100" style="width: 100%;"></progress>
+    <p id="status">No file selected.</p>
+    <script src="converter.js"></script>
+</body>
+</html>
